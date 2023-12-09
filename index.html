@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko Kasur Tigaraksa</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Kasur<span>Tigaraksa</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Model</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Nikmati Tidurmu dengan Kasur <span>Terbaik</span></h1>
+        <p>Selamat datang di Toko Kasur Tigaraksa</p>
+        <a href="#" class="cta">Hubungi Kami</a>
+      </main>
+    </section>
+    <!-- hero section end -->
+
+    <!-- about section start -->
+    <section id="about" class="about">
+      <h2>Tentang <span>Kami</span></h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/bg-kasur.png" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h3>Kasur Terbaik dan nyaman</h3>
+          <p>
+            Jadikan tidur anda lebih nyaman! Kasur tigaraksa menyediakan Kasur
+            Inoac yang memiliki kualitas terbaik dan harga terjangkau. Siap
+            antar ke kota manapun.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- menu section start -->
+    <section id="menu" class="menu">
+      <h2>Model <span>Kasur</span></h2>
+
+      <div class="row">
+        <div class="menu-card">
+          <img src="img/menu/bg-kasur.jpg" alt="Inoac" class="menu-card-img" />
+          <h3 class="menu-card-tittle">-inoac-</h3>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/bg-kasur.jpg" alt="Inoac" class="menu-card-img" />
+          <h3 class="menu-card-tittle">-inoac-</h3>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/bg-kasur.jpg" alt="Inoac" class="menu-card-img" />
+          <h3 class="menu-card-tittle">-inoac-</h3>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/bg-kasur.jpg" alt="Inoac" class="menu-card-img" />
+          <h3 class="menu-card-tittle">-inoac-</h3>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/bg-kasur.jpg" alt="Inoac" class="menu-card-img" />
+          <h3 class="menu-card-tittle">-inoac-</h3>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/bg-kasur.jpg" alt="Inoac" class="menu-card-img" />
+          <h3 class="menu-card-tittle">-inoac-</h3>
+        </div>
+      </div>
+    </section>
+    <!-- menu section end -->
+
+    <!-- Slider gambar Start -->
+    <div class="slideshow-container">
+      <h2>Model Kasur Kami</h2>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="img/bg-kasur.png" style="width: 100%" />
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="img/bg-kasur1.jpg" style="width: 100%" />
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="img/bg-kasur2.jpg" style="width: 100%" />
+        <div class="text">Caption Three</div>
+      </div>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <!-- Slider gambar end -->
+
+    <!-- feather icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- javascript -->
+    <script src="js/script.js"></script>
+
+    <!-- Script slider img -->
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
